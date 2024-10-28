@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hero {
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.btn {
+    background: #e8491d;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #35424a;
+}
+
+.service {
+    margin-bottom: 20px;
+}
+
+.service img {
+    width: 100%; /* Rasm kengligi konteyner kengligiga teng */
+    max-width: 600px; /* Maksimal kenglik */
+    height: auto; /* Balandlik avtomatik saqlanadi */
+    border-radius: 8px; /* Burchaklar yumshatilgan */
+    display: block; /* Rasmning pastki bo'sh joyini yo'qotish uchun */
+    margin: 0 auto; /* Rasmni markazga joylash */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #e8491d;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.content {
+    display: flex; /* Asosiy kontent va reklama joylarini yonma-yon joylashtirish */
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.main-content {
+    flex: 1; /* Asosiy kontent kengligini bo'sh joyga tenglashtirish */
+    margin-right: 20px; /* Reklama joyi va asosiy kontent o'rtasida bo'sh joy */
+}
+
+.advertisement {
+    width: 300px; /* Reklama joyining kengligi */
+    background: #f4f4f4; /* Foni */
+    padding: 15px; /* Ichki bo'sh joy */
+    border-radius: 8px; /* Burchaklar yumshatilgan */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soyali effekt */
+}
+
+.advertisement img {
+    width: 100%; /* Rasm kengligi konteyner kengligiga teng */
+    height: auto; /* Balandlik avtomatik saqlanadi */
+    border-radius: 5px; /* Burchaklar yumshatilgan */
+    margin-bottom: 10px; /* Rasm ostidagi bo'sh joy */
+}
+.about-image {
+    width: 50%; /* Rasm kengligini 100% qilib belgilash */
+    height: auto; /* Balandlikni avtomatik saqlash */
+    border-radius: 8px; /* Burchaklarni yumshatish */
+    margin-bottom: 20px; /* Pastga bo'sh joy qo'shish */
+}
+.logo {
+    font-size: 24px; /* Logotipning o'lchamini oshirish */
+    font-weight: bold; /* Qalin qilish */
+    color: #4A90E2; /* Rang berish */
+    letter-spacing: 1px; /* Harflar orasidagi masofani oshirish */
+    text-decoration: none; /* Chiziqni olib tashlash */
+    transition: color 0.3s ease; /* Rang o'tishi */
+}
+
+.logo a {
+    color: inherit; /* Rangni meros qilib olish */
+}
+
+.logo:hover {
+    color: #007BFF; /* Hover holatida rangni o'zgartirish */
+}
+.carousel {
+    position: relative;
+    max-width: 600px; /* Carousel kengligi */
+    margin: auto; /* Markazlash */
+    overflow: hidden; /* Ichki tarkibdan tashqariga chiqishini oldini olish */
+    border: 2px solid #4A90E2; /* Chiroyli chekka */
+    border-radius: 8px; /* Burchaklarni yumshatish */
+}
+
+.carousel-item {
+    display: none; /* Dastlab barcha rasmlarni yashirish */
+    text-align: center; /* Matnni markazga joylashtirish */
+}
+
+.carousel-item img {
+    width: 100%; /* Rasm kengligini cheklash */
+    border-radius: 8px 8px 0 0; /* Rasmning ustki burchaklarini yumshatish */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100; /* Tugmachalar yuqori qatlamda ko'rsatilishi uchun */
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+h3 {
+    margin: 10px 0; /* Ustki va pastki margin berish */
+}
+
+p {
+    margin: 0 20px; /* O'ng va chap tomondan margin berish */
+}

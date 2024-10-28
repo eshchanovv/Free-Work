@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Xizmatlar</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Free Work</a></div>
+            <ul>
+                <li><a href="index.html">Asosiy</a></li>
+                <li><a href="services.html">Xizmatlar</a></li>
+                <li><a href="about.html">Biz haqimizda</a></li>
+                <li><a href="contact.html">Aloqa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <section class="main-content">
+                <h2>Xizmatlarimiz</h2>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="web-development.jpg" alt="Veb ishlab chiqish">
+                        <h3>Veb ishlab chiqish</h3>
+                        <p>Sizning biznesingiz uchun zamonaviy va foydalanuvchi do'st veb-saytlar yaratamiz.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="graphic-design.jpg" alt="Grafik dizayn">
+                        <h3>Grafik dizayn</h3>
+                        <p>Sizning brendingizni ko'rkam qilish uchun sifatli grafik dizaynlar tayyorlaymiz.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="marketing.jpg" alt="Marketing">
+                        <h3>Marketing</h3>
+                        <p>Biznesingizni rivojlantirish uchun zamonaviy marketing strategiyalarini taklif etamiz.</p>
+                    </div>
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </section>
+            <aside class="advertisement">
+                <h2>Reklama</h2>
+                <img src="advertisement.gif" alt="Reklama" />
+                <p>Eng yaxshi xizmatlar uchun bizni tanlang!</p>
+                <a href="#" class="btn">Ko'proq ma'lumot</a>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Free Work. Barcha huquqlar himoyalangan.</p>
+        <p>Biz haqimizda | Xizmatlar | Aloqa</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.carousel-item').length;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-item');
+            if (index >= totalSlides) currentSlide = 0;
+            if (index < 0) currentSlide = totalSlides - 1;
+
+            slides.forEach((slide, i) => {
+                slide.style.display = i === currentSlide ? 'block' : 'none';
+            });
+        }
+
+        function changeSlide(n) {
+            showSlide(currentSlide += n);
+        }
+
+        function autoSlide() {
+            changeSlide(1);
+        }
+
+        showSlide(currentSlide);
+        setInterval(autoSlide, 3000); // Har 3 soniyada avtomatik aylantirish
+    </script>
+</body>
+</html>
